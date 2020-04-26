@@ -1,5 +1,5 @@
 # モジュールインポート
-import time
+# import time
 import streamlit as st
 from streamlit import caching
 import matplotlib.pyplot as plt
@@ -7,10 +7,10 @@ import scipy.stats as sts
 import numpy as np
 import pandas as pd
 import plotly.figure_factory as ff
+# last_time = time.time()
 
 # CACHE初期化
 caching.clear_cache()
-last_time = time.time()
 
 # ツールを選択
 st.sidebar.subheader("ツールを選択")
@@ -120,12 +120,6 @@ if select_tool == '工程能力まとめ':
                 '線タイプ　　', [al_style, '-', '-.', ':'])
             # 線幅
             al_width = st.sidebar.slider('線幅　　', 0.0, 3.0, al_width)
-
-        # 出力設定
-        if st.checkbox("アップロードデータ表示"):
-            st.dataframe(df)
-
-        # データプロセス
         # 工程能力線図プロット関数
 
         def pci_fig(column_name, column_data, usl, lsl, max_x, min_x):
@@ -181,7 +175,9 @@ if select_tool == '工程能力まとめ':
             plt.vlines(lal, 0, lh, color=al_color,
                        linewidth=al_width, linestyle=al_style)
             return st.pyplot()
-
+        # 出力設定
+        if st.checkbox("アップロードデータ表示"):
+            st.dataframe(df)
         # 工程能力線図表示
         st.subheader("工程能力線図表示")
         display_type = st.radio("", ('項目別表示', '全項目表示'))
@@ -192,16 +188,16 @@ if select_tool == '工程能力まとめ':
             pci_fig(select_column_names, select_column_data,
                     usl, lsl, max_x, min_x)
             plt.close()
-            st.write('it took {:.3f} seconds to process data'.format(
-                time.time()-last_time))
+            # st.write('it took {:.3f} seconds to process data'.format(
+            #     time.time()-last_time))
         # 全項目表示
         if display_type == '全項目表示':
             for column_name in column_names:
                 column_data = df[column_name]
                 pci_fig(column_name, column_data, usl, lsl, max_x, min_x)
                 plt.close()
-            st.write('it took {:.3f} seconds to process data'.format(
-                time.time()-last_time))
+            # st.write('it took {:.3f} seconds to process data'.format(
+            #     time.time()-last_time))
 
 # if select_tool=='データ可視化':
 if select_tool == 'データ可視化':
