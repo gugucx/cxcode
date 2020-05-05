@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import scipy.stats as sts
 import numpy as np
 import pandas as pd
-import plotly.figure_factory as ff
 
 # last_time = time.time()
 
@@ -14,11 +13,11 @@ import plotly.figure_factory as ff
 caching.clear_cache()
 
 # ツールを選択
-st.sidebar.subheader("ツールを選択")
-select_tool = st.sidebar.selectbox("", ["工程能力まとめ", "データ可視化"])
+st.sidebar.title("Dscouter (Ver.1.0.0)")
+select_tool = st.sidebar.selectbox("ツールを選択", ["工程能力まとめ", "データ可視化"])
 if select_tool == "工程能力まとめ":
     # データインプット
-    st.title("工程能力まとめ ツール　(ver0.10)")
+    st.title("工程能力まとめ (Ver1.0.0)")
 
     upload_data = st.file_uploader("", type=["csv"])
     if upload_data is not None:
@@ -74,8 +73,8 @@ if select_tool == "工程能力まとめ":
             axis_font = st.sidebar.slider("軸フォントサイズ", 1.0, 12.0, axis_font)
         # プロット設定
         st.sidebar.subheader("プロット設定")
-        # ヒストグラム階級設定
-        hist_bins = st.sidebar.slider("ヒストグラム階級", 1, 50, hist_bins)
+        # 点図階級設定
+        hist_bins = st.sidebar.slider("点図階級", 1, 50, hist_bins)
         # プロット範囲設定
         pltarea_setting = "pltarea_setting_no"
         if st.sidebar.checkbox("プロット範囲 設定"):
@@ -93,8 +92,8 @@ if select_tool == "工程能力まとめ":
             sl_style = st.sidebar.selectbox("線タイプ", [sl_style, "--", "-.", ":"])
             # 線幅
             sl_width = st.sidebar.slider("線幅", 0.0, 3.0, sl_width)
-            # ヒストグラム関連設定
-            st.sidebar.text("▼ヒストグラム関連設定")
+            # 点図関連設定
+            st.sidebar.text("▼点図関連設定")
             # 色
             hist_color = st.sidebar.selectbox(
                 "色", [hist_color, "tab:blue", "red", "green"]
@@ -223,22 +222,10 @@ if select_tool == "データ可視化":
         st.subheader("グラフ表示")
         # 単一項目選択表示
         if st.checkbox("単一データ表示"):
-            type_of_plot = st.selectbox("グラフタイプを選択", ["ヒストグラム", "棒図", "線図"])
+            type_of_plot = st.selectbox("グラフタイプを選択", ["棒図", "線図"])
             select_column_names = st.selectbox("データを選択", column_names)
 
             # Plot By Streamlit
-            if type_of_plot == "ヒストグラム":
-                select_column_data = df[select_column_names]
-                labels = [select_column_names]
-                plotly_histbins = st.slider("階級数", 0.01, 2.00, 0.10)
-                plotly_fig = ff.create_distplot(
-                    [df[select_column_names]],
-                    labels,
-                    bin_size=plotly_histbins,
-                    curve_type="normal",
-                )
-                st.plotly_chart(plotly_fig, use_container_width=True)
-
             if type_of_plot == "棒図":
                 cust_data = df[select_column_names]
                 st.bar_chart(cust_data)
