@@ -15,9 +15,6 @@ st.sidebar.title("Dscouter (Ver.1.0.0)")
 select_tool = st.sidebar.selectbox("ツール選択", ["工程能力まとめ", "データ可視化"])
 if select_tool == "工程能力まとめ":
     st.title("工程能力まとめツール")
-    st.header("ローカルPCでDscouterを実行する方法")
-    video_file = open("how_to_run_Dscouter.mp4", "rb")
-    st.video(video_file.read())
     # 共通設定値初期化
     # plot area settings
     plot_area_setting = "plot_area_setting_no"
