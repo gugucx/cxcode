@@ -1,0 +1,10 @@
+python install:
+https://www.python.org/downloads/release/python-377/
+
+module install:
+python -m pip install --upgrade pip'
+pip install -r requirements.txt
+
+run dscouter:
+streamlit run dscouter.py
+

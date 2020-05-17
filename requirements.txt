@@ -1,6 +1,7 @@
 streamlit
 matplotlib
+seaborn
 scipy
 numpy
 pandas
-plotly
+

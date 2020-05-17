@@ -15,7 +15,10 @@ st.sidebar.title("Dscouter (Ver.1.0.0)")
 select_tool = st.sidebar.selectbox("ツール選択", ["工程能力まとめ", "データ可視化"])
 if select_tool == "工程能力まとめ":
     st.title("工程能力まとめツール")
-    # 共通設定初期値
+    st.header("ローカルPCでDscouterを実行する方法")
+    video_file = open("how_to_run_Dscouter.mp4", "rb")
+    st.video(video_file.read())
+    # 共通設定値初期化
     # plot area settings
     plot_area_setting = "plot_area_setting_no"
     plot_area_individual_setting = "plot_area_individual_setting_no"
@@ -108,7 +111,7 @@ if select_tool == "工程能力まとめ":
             spec_limit_lower = st.sidebar.number_input(
                 "下限規格値(共通)を入力", value=spec_limit_lower
             )
-        if limit_type == "片側規格":
+        else:
             spec_limit_type_setting = "single_spec_limit"
             # 片側規格値入力
             spec_limit_single = st.sidebar.number_input(
@@ -276,7 +279,7 @@ if select_tool == "工程能力まとめ":
                 cpl = (mu - spec_limit_lower) / (3 * sig)
                 cpk = min(cpu, cpl)
             # 片側規格の場合
-            if spec_limit_type_setting == "single_spec_limit":
+            else:
                 # 片側規格個別設定
                 if spec_limit_setting == "spec_limit_setting_yes":
                     spec_limit_single = st.number_input(
@@ -298,7 +301,7 @@ if select_tool == "工程能力まとめ":
                     str([column_name])
                     + f"の工程能力まとめ： n={n:.0f}, Ave={mu:.2f}, σ={sig:.2f}, Cpk={cpk:.2f}, UAL={ual:.2f}, LAL={lal:.2f}"
                 )
-            if spec_limit_type_setting == "single_spec_limit":
+            else:
                 st.success(
                     str([column_name])
                     + f"の工程能力まとめ： n={n:.0f}, Ave={mu:.2f}, σ={sig:.2f}, Cpk={cpk:.2f}, AL={sal:.2f}"
@@ -361,7 +364,7 @@ if select_tool == "工程能力まとめ":
                     linewidth=action_line_width,
                     linestyle=action_line_style,
                 )
-            if spec_limit_type_setting == "single_spec_limit":
+            else:
                 plt.vlines(
                     spec_limit_single,
                     0,
