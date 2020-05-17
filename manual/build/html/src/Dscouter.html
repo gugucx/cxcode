@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="jp" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="jp" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dscouterとは &mdash; Dscouter 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Welcome to Dscouter!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Dscouter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dscouterとは</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id1">工程能力まとめ　ツール</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1. 元データの準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2. データのアップロード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">3. 規格値の入力</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">個別規格値の設定</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">4. 工程能力線図の表示設定</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">表示種類の選択</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">表示範囲の設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">工程能力線図表示の詳細設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">工程能力線図の保存</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">5. 共通設定の保存と導入</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">共通設定の保存</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">共通設定の導入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id14">データ可視化　ツール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#contacts">contacts</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dscouter</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Dscouterとは</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/src/Dscouter.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="dscouter">
+<h1>Dscouterとは<a class="headerlink" href="#dscouter" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Dscouterとは、生技業務用の効率化ツールです。<br />現在は２種類のツールあります。</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>工程能力まとめツール</p></li>
+</ul>
+<blockquote>
+<div><p><img alt="../_images/2020-05-09-15-46-04.png" src="../_images/2020-05-09-15-46-04.png" /></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>データ可視化ツール</p></li>
+</ul>
+<blockquote>
+<div><p><img alt="../_images/2020-05-09-15-46-38.png" src="../_images/2020-05-09-15-46-38.png" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="id1">
+<h1>工程能力まとめ　ツール<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>1. 元データの準備<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>CSVデータを事前に用意してください。データのフォーマットは以下通りです。<br />１行目は項目名、２行目以降はデータを入れてください。<br />※項目名は英語にしてください。
+<img alt="../_images/2020-05-09-15-55-43.png" src="../_images/2020-05-09-15-55-43.png" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>2. データのアップロード<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>以下通り、データをアップロードする。
+<img alt="../_images/2020-05-09-16-02-22.png" src="../_images/2020-05-09-16-02-22.png" /></p>
+</div></blockquote>
+<blockquote>
+<div><p>アップロードしたデータを確認したい場合、チェックを入れてください。
+<img alt="../_images/2020-05-09-16-08-16.png" src="../_images/2020-05-09-16-08-16.png" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2>3. 規格値の入力<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>データの規格種類を選択し、規格値を入力してください。
+<img alt="../_images/2020-05-09-16-14-45.png" src="../_images/2020-05-09-16-14-45.png" /></p>
+</div></blockquote>
+<div class="section" id="id5">
+<h3>個別規格値の設定<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><img alt="../_images/2020-05-09-16-20-54.png" src="../_images/2020-05-09-16-20-54.png" /></p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>4. 工程能力線図の表示設定<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>工程能力線図の見方は以下通りです。
+<img alt="../_images/2020-05-09-16-38-54.png" src="../_images/2020-05-09-16-38-54.png" /></p>
+</div></blockquote>
+<div class="section" id="id7">
+<h3>表示種類の選択<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>工程能力線図（項目別）</p></li>
+</ul>
+<blockquote>
+<div><p><img alt="../_images/2020-05-09-16-26-33.png" src="../_images/2020-05-09-16-26-33.png" /></p>
+</div></blockquote>
+<p>+工程能力線図（全項目）</p>
+<blockquote>
+<div><p><img alt="../_images/2020-05-09-16-28-49.png" src="../_images/2020-05-09-16-28-49.png" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="id8">
+<h3>表示範囲の設定<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>共通プロット表示範囲が設定可能</p></li>
+</ul>
+<blockquote>
+<div><p><img alt="../_images/2020-05-09-17-03-04.png" src="../_images/2020-05-09-17-03-04.png" /></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>個別にプロット表示範囲が設定可能</p></li>
+</ul>
+<blockquote>
+<div><p><img alt="../_images/2020-05-09-17-06-21.png" src="../_images/2020-05-09-17-06-21.png" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="id9">
+<h3>工程能力線図表示の詳細設定<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>以下項目の設定が可能です。</p>
+<ul class="simple">
+<li><p>軸ラベルの表示：表示有無、軸ラベルフォントサイズの設定</p></li>
+<li><p>グラフサイズ設定：グラフDPI、グラフ幅、グラフ高さの設定</p></li>
+<li><p>ヒストグラム詳細設定：ヒストグラム階級、色の設定</p></li>
+<li><p>規格線詳細設定：色、幅、線タイプの設定</p></li>
+<li><p>正規分布曲線詳細設定：色、幅、線タイプの設定</p></li>
+<li><p>アクションライン詳細設定：色、幅、線タイプの設定</p></li>
+<li><p>プロット線高さ設定：規格線、正規分布曲線、アクションライン高さの設定
+<img alt="../_images/2020-05-09-17-16-27.png" src="../_images/2020-05-09-17-16-27.png" /></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id10">
+<h3>工程能力線図の保存<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>画像を右クリックし、画像をクリックする。
+<img alt="../_images/2020-05-09-17-32-57.png" src="../_images/2020-05-09-17-32-57.png" /></p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>5. 共通設定の保存と導入<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h3>共通設定の保存<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>以下通り、共通設定がsettings.jsonファイルに保存されます　　
+<img alt="../_images/2020-05-09-17-35-41.png" src="../_images/2020-05-09-17-35-41.png" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="id13">
+<h3>共通設定の導入<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>以下通り、保存されたsettings.json設定ファイルが導入できます。
+<img alt="../_images/2020-05-09-17-40-41.png" src="../_images/2020-05-09-17-40-41.png" /></p>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h1>データ可視化　ツール<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>現在可視化されるグラフタイプは、棒図、線図、散布図行列です。</p>
+</div></blockquote>
+<blockquote>
+<div><ul class="simple">
+<li><p>棒図
+<img alt="../_images/2020-05-09-17-54-51.png" src="../_images/2020-05-09-17-54-51.png" /></p></li>
+<li><p>線図
+<img alt="../_images/2020-05-09-17-54-01.png" src="../_images/2020-05-09-17-54-01.png" /></p></li>
+<li><p>散布図行列
+<img alt="../_images/2020-05-09-17-55-26.png" src="../_images/2020-05-09-17-55-26.png" /></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="contacts">
+<h1>contacts<a class="headerlink" href="#contacts" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>contacts</p>
+</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to Dscouter!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, ADAS_3seigi
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
